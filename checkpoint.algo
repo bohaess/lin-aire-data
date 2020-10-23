@@ -1,0 +1,74 @@
+//first problem with array 
+// first methode
+ALGORITHM sum_diff_element
+VAR
+     i,j,s: INTEGER;
+     set1 : ARRAY_OF INTEGER [20];
+     set2 : ARRAY_OF INTEGER [20];
+     test : BOOLEAN   
+BEGIN
+test := true;
+s := 0;
+FOR i FROM 0 TO set1.length -1 STEP step1  DO
+     FOR j FROM 0 TO set2.length -1 STEP step1  DO
+         IF (se1[i] = se2[j]) THEN
+             test := false;
+         END_IF
+     END_FOR
+     IF (test = true) THEN
+         s := s + set2[j];
+     END_IF
+END_FOR
+
+
+FOR j FROM 0 TO set2.length -1 STEP step1  DO
+    FOR i FROM 0 TO set1.length -1 STEP step1  DO
+    IF (set1[i] = set[j]) THEN
+        test := false
+    END_IF
+    END_FOR
+    IF (test = true) THEN
+        s := s + set1[i];
+    END_IF
+END_FOR
+write ("The sum of the different elements is :",s);
+END 
+
+//first problem with array 
+//second method
+ALGORITHM sum_diff_element
+VAR
+    i,j,k,s: INTEGER;
+     set1 : ARRAY_OF INTEGER [20];
+     set2 : ARRAY_OF INTEGER [20];
+     set3 : ARRAY_OF INTEGER [40]; 
+     test : BOOLEAN 
+BEGIN
+k := 0;
+FOR i FROM 0 TO set1.length-1  STEP step1  DO
+    set3 [k] := set1[i]
+    k := k+1;
+END_FOR
+k := set1.length-1;
+FOR j FROM 0 TO set2.length-1 STEP step1  DO
+    set3[k] := set2[j];
+    k := k+1;
+END_FOR
+
+FOR l FROM 0 TO set3.length-2 STEP step1  DO
+  FOR m FROM l+1 TO set3.length-1 STEP step1  DO
+      IF (set3[l] = set3[m]) THEN
+          test:=false;
+      END_IF
+  END_FOR
+  IF (test= true) THEN
+      s:= s+ set3[l];
+  END_IF
+END_FOR
+
+ENDwrite ("The sum of the different elements is :",s);
+END 
+
+//first problem with array 
+//second method
+ALGORITHM
